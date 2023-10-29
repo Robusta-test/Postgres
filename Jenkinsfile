@@ -68,8 +68,7 @@ pipeline {
                                     rm -rf Robusta-helm
                                     git clone "https://$USERNAME:$PASSWORD@github.com/ahmedgmansour/Robusta-helm.git"
                                     cd Robusta-helm
-                                    sed -i '/postgres/c\\        image: ahmedgmansour/postgres:${BUILD_NUMBER}'  postgres/postgres/vaules.yaml
-                                    cat prod/cms/drupal-deployment.yaml
+                                    sed -i '/postgres/c\\        image: ahmedgmansour/postgres:${BUILD_NUMBER}'  drupal/drupal/vaules.yaml
                                     ls -a
                                     git config --global user.email "ahmedgmal.383#gmail.com"
                                     git config --global user.name "ahmedgmansour"
